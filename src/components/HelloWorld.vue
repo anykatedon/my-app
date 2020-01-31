@@ -6,12 +6,16 @@
           <div class="card-header">Vue Axios Post Demo App</div>
           <div class="card-body">
             <form @submit.prevent="formSubmit">
-              <strong>Name:</strong>
-              <input type="text" class="form-control" v-model="name" />
-              <strong>Description:</strong>
-              <textarea class="form-control" v-model="description"></textarea>
-              <button class="btn btn-success">Submit</button>
+              <div class="form-group">
+                <input type="text" class="form-control" v-model="name" placeholder="Name" />
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" v-model="description" placeholder="Description"></textarea>
+              </div>
+              <button class="btn btn-success btn-block">Submit</button>
             </form>
+          </div>
+          <div class="card-footer">
             <strong>Output:</strong>
             <pre>
               {{output}}
@@ -45,6 +49,8 @@ export default {
         })
         .then(function(response) {
           currentObj.output = response.data;
+          currentObj.name = '';
+          currentObj.description = '';
         })
         .catch(function(error) {
           currentObj.output = error;

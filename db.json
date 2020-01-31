@@ -1,19 +1,4 @@
 {
   "employees": [
-    {
-      "id": 1,
-      "name": "Pankaj",
-      "description": "employee"
-    },
-    {
-      "id": 2,
-      "name": "David",
-      "description": "manager"
-    },
-    {
-      "name": "Aniket",
-      "description": "Developer",
-      "id": 3
-    }
   ]
 }
